@@ -17,7 +17,7 @@ set(GDAL_INSTALL_DIR ${BUILD_DIR}/gdal/install)
 add_executable(Fastview4Geo core/src/main.cpp)
 
 # Add include directories for each external library
-include_directories(
+target_include_directories(Fastview4Geo PRIVATE
     ${LIBTIFF_INSTALL_DIR}/include
     ${CURL_INSTALL_DIR}/include
     ${PROJ_INSTALL_DIR}/include
